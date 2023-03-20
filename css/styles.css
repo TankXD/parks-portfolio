@@ -22,3 +22,10 @@ html {
   background-color: var(--bg-dark-navy);
   overflow: hidden;
 }
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}

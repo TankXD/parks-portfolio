@@ -1,3 +1,10 @@
 :root {
   --bg-dark-navy: rgb(32, 32, 40);
+  --bg-nav: rgba(32, 32, 40, 0.89);
+  --nav-font-color: ivory;
+  --font-base: 16px;
+  --font-medium: 20px;
+  --font-semi-big: 24px;
+  --font-big: 28px;
+  --font-super-big: 32px;
 }
