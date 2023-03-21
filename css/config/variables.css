@@ -1,15 +1,20 @@
 :root {
   /* background color */
   --bg-dark-navy: rgb(32, 32, 40);
+  --bg-white: white;
   --bg-nav: rgba(32, 32, 40, 0.89);
   --bg-light-bg: rgba(0, 0, 0, 0.5);
   --bg-super-light-bg: rgba(0, 0, 0, 0.4);
-  --bg-light-gray: #616161;
+  --bg-gray: #616161;
+  --bg-light-gray: rgba(255, 255, 255, 0.102);
   --bg-orange: #feb546;
   --bg-tomato: #d4583a;
 
   /* color */
   --color-white: ivory;
+  --color-pure-white: white;
+  --color-black: black;
+  --color-gray: gray;
   /* font-size */
   --font-mini: 14px;
   --font-small: 16px;
@@ -24,5 +29,5 @@
   --weight-bold: 700;
 
   /* width */
-  --section-max-width: 1280px;
+  --section-max-width: 1200px;
 }

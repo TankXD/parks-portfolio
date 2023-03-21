@@ -1,0 +1,89 @@
+/* .work__section h2, .work__section h4{} */
+
+.work__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work__project {
+  /* grid로 하는 경우
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(500px, auto));
+    width: 100%; */
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5vw;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-light-gray);
+  border-radius: 10px;
+  padding: 24px;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.project:hover {
+  transition: box-shadow 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.project__img {
+  width: 100%;
+
+  background-color: red;
+  border-radius: 3px;
+}
+
+.project__title {
+  margin-top: 24px;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  max-width: 85%;
+  gap: 6px;
+  margin: 24px 0 16px 0;
+}
+.tag {
+  padding: 8px;
+  border-radius: 36px;
+  background-color: var(--bg-white);
+  color: var(--color-black);
+}
+.tag span {
+  color: inherit;
+}
+
+.project__description {
+  line-height: 1.3em;
+  text-align: start;
+}
+
+.project__links {
+  padding: 16px;
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+  font-size: var(--font-medium);
+}
+.project__links a {
+  opacity: 0.6;
+}
+
+.project__links a:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+  opacity: 1;
+}
