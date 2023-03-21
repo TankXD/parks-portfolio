@@ -1,2 +1,63 @@
-#about {
+.about__section {
+  text-align: center;
+}
+
+.about__skills {
+  margin-top: 2rem;
+}
+
+.about__info p,
+.about__skills p {
+  /* white-space: pre-wrap; */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.5em;
+}
+
+.skillset {
+  display: flex;
+}
+
+.skillset__main {
+  background-color: var(--bg-light-bg);
+  flex-basis: 60%;
+  padding: 20px 40px;
+  border-radius: 10px 0 0 10px;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--bg-light-gray);
+}
+
+.skill__value {
+  height: 3px;
+  background-color: var(--bg-tomato);
+  /* background-color: var(--bg-orange); */
+}
+
+.skillset__others {
+  background-color: var(--bg-super-light-bg);
+  flex-basis: 40%;
+  padding: 20px 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.others__list {
+  margin-top: 20px;
+}
+.others__list li {
+  margin-bottom: 8px;
 }

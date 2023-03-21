@@ -2,6 +2,12 @@
   /* background color */
   --bg-dark-navy: rgb(32, 32, 40);
   --bg-nav: rgba(32, 32, 40, 0.89);
+  --bg-light-bg: rgba(0, 0, 0, 0.5);
+  --bg-super-light-bg: rgba(0, 0, 0, 0.4);
+  --bg-light-gray: #616161;
+  --bg-orange: #feb546;
+  --bg-tomato: #d4583a;
+
   /* color */
   --color-white: ivory;
   /* font-size */

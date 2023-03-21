@@ -38,6 +38,8 @@ section {
 
 .section__container {
   width: 100%;
+  padding-top: 100px;
+  text-align: center;
   /* max-width: var(--section-max-width); */
   /* margin: auto; */
 }
@@ -53,6 +55,16 @@ h2 {
   font-weight: var(--weight-bold);
   color: var(--color-white);
 }
+h4 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
+}
 p {
+  color: var(--color-white);
+}
+
+span {
+  font-size: var(--font-mini);
   color: var(--color-white);
 }
