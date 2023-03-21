@@ -1,10 +1,22 @@
 :root {
+  /* background color */
   --bg-dark-navy: rgb(32, 32, 40);
   --bg-nav: rgba(32, 32, 40, 0.89);
-  --nav-font-color: ivory;
-  --font-base: 16px;
-  --font-medium: 20px;
-  --font-semi-big: 24px;
-  --font-big: 28px;
-  --font-super-big: 32px;
+  /* color */
+  --color-white: ivory;
+  /* font-size */
+  --font-mini: 14px;
+  --font-small: 16px;
+  --font-regular: 20px;
+  --font-medium: 24px;
+  --font-semi-large: 28px;
+  --font-large: 32px;
+  --font-super-large: 40px;
+  /* font-weight */
+  --weight-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+
+  /* width */
+  --section-max-width: 1280px;
 }
