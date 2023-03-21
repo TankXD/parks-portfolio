@@ -44,7 +44,8 @@ section {
   width: 100%;
   text-align: center;
   max-width: var(--section-max-width);
-  margin: 140px auto 140px auto;
+  margin: 0 auto;
+  padding: 200px 0 100px 0;
 }
 
 h1 {
