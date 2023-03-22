@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
+  transition: opacity 0.3s ease-in-out;
 }
 
 .home__section__info {
@@ -51,19 +52,4 @@
 
 .home__scroll #scroll__btn {
   cursor: pointer;
-}
-
-#scroll__top {
-  background-color: var(--bg-white);
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-  z-index: 100;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: var(--color-dark-gray);
-  font-size: 14px;
 }
