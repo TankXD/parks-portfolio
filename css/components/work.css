@@ -30,11 +30,11 @@
   opacity: 0.86;
 }
 
-.category__btn.active {
+.category__btn.selected {
   opacity: 1;
   transform: scale(1.03);
 }
-.category__btn.active .category__count {
+.category__btn.selected .category__count {
   opacity: 1;
   top: 0px;
 }
