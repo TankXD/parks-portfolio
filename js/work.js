@@ -12,14 +12,11 @@ const handleSelected = (e) => {
   if (preTarget) {
     preTarget.classList.remove("selected");
   }
-  if (e.target.tagName === "SPAN") {
-    const targetBtn = e.target.parentNode;
-    targetBtn.classList.add("selected");
-    preTarget = targetBtn;
-  } else {
-    e.target.classList.add("selected");
-    preTarget = e.target;
-  }
+
+  const targetBtn =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  targetBtn.classList.add("selected");
+  preTarget = targetBtn;
   // 1. 이전 타겟을 나중에 저장해주고
 };
 
