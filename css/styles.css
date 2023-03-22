@@ -13,6 +13,7 @@
 @import "./components/about.css";
 @import "./components/work.css";
 @import "./components/contact.css";
+@import "./components/footer.css";
 
 * {
   box-sizing: border-box;
@@ -20,6 +21,7 @@
 
 body {
   width: 100%;
+  /* width: 100vw; */
   height: 200vh;
   /* font-family: "Poppins", sans-serif; */
   font-family: "Nunito", "Noto Sans JP", sans-serif;

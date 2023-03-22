@@ -9,12 +9,15 @@
   --bg-light-gray: rgba(255, 255, 255, 0.102);
   --bg-orange: #feb546;
   --bg-tomato: #d4583a;
+  --bg-green: #00d350;
+  --bg-sky: #b9cfe9;
 
   /* color */
   --color-white: ivory;
   --color-pure-white: white;
   --color-black: black;
   --color-gray: gray;
+  --color-dark-gray: rgb(93, 93, 93);
   /* font-size */
   --font-mini: 14px;
   --font-small: 16px;

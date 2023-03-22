@@ -8,6 +8,14 @@
   align-items: center;
   padding: 32px 10%;
   background-color: var(--bg-nav);
+  transition: all 0.2s ease-in-out;
+}
+
+/* #navba이면서 .navbar--scroll일 때 적용 됨.*/
+/* 선택자는 띄어쓰기를 하냐마냐에 따라 달라짐 */
+#navbar.navbar--scroll {
+  background-color: transparent;
+  padding: 24px 2%;
 }
 
 .navbar__logo {
