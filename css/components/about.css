@@ -25,6 +25,7 @@
   padding: 20px 40px;
   border-radius: 10px 0 0 10px;
 }
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -44,7 +45,7 @@
 
 .skill__value {
   height: 3px;
-  background-color: var(--bg-tomato);
+  /* background-color: var(--bg-tomato); */
   /* background-color: var(--bg-orange); */
 }
 
@@ -60,4 +61,10 @@
 }
 .others__list li {
   margin-bottom: 8px;
+}
+
+.skillset__main:hover,
+.skillset__others:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.02);
 }

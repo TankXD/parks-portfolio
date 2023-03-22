@@ -10,6 +10,7 @@
     <meta name="description" content="frontend engineer Park's Portfolio" />
     <script src="js/main.js" defer></script>
     <script src="js/scroll.js" defer></script>
+    <script src="js/work.js" defer></script>
     <script
       src="https://kit.fontawesome.com/84cbe2bb98.js"
       crossorigin="anonymous"
@@ -89,14 +90,12 @@
           <h2>About me</h2>
           <p>
             フロントエンドエンジニアを目指しているパクソンチャンと申します。<br />
-            国立Incheon National
-            Universityを中退しました。日本人と結婚しています。<br />個人事業をしていた時から興味深かったWEBエンジニアになろうと決心しました。<br />現在は日本でフロントエンドエンジニアになることが目標です。
+            国立Incheon National Universityを中退しました。<br />個人事業をしていた時から興味深かったWEBエンジニアになろうと決心しました。<br />絶えず努力して成長し続けるエンジニアに残るのが目標です。
           </p>
         </div>
         <div class="about__skills">
           <h2>Skills</h2>
           <p>
-            現実に安住せずに常に絶えず発展するエンジニアになりたいと思っています。<br />
             今までJavascriptを中心に勉強してTOYプロジェクトを作っています。<br />最近はサーバーサイドとの通信とWEBの全般的な構成を理解するため、Node.jsを用いてフルスタックプロジェクトを作りました。<br />
             これからはJavascriptの知識を深めるつもりです。そしてReactを勉強してSpaウェブプロジェクトを作ってみようと思ってます。
           </p>
@@ -108,7 +107,10 @@
                   <span>HTML</span><span>95%</span>
                 </div>
                 <div class="skill__bar">
-                  <div class="skill__value" style="width: 95%"></div>
+                  <div
+                    class="skill__value"
+                    style="width: 95%; background-color: #d4583a"
+                  ></div>
                 </div>
               </div>
 
@@ -117,7 +119,10 @@
                   <span>CSS</span><span>90%</span>
                 </div>
                 <div class="skill__bar">
-                  <div class="skill__value" style="width: 90%"></div>
+                  <div
+                    class="skill__value"
+                    style="width: 90%; background-color: #018dd9"
+                  ></div>
                 </div>
               </div>
               <div class="skill">
@@ -125,15 +130,21 @@
                   <span>Javascript</span><span>85%</span>
                 </div>
                 <div class="skill__bar">
-                  <div class="skill__value" style="width: 85%"></div>
+                  <div
+                    class="skill__value"
+                    style="width: 85%; background-color: #ffe62b"
+                  ></div>
                 </div>
               </div>
               <div class="skill">
                 <div class="skill__description">
-                  <span>NodeJs</span><span>50%</span>
+                  <span>NodeJs</span><span>60%</span>
                 </div>
                 <div class="skill__bar">
-                  <div class="skill__value" style="width: 50%"></div>
+                  <div
+                    class="skill__value"
+                    style="width: 60%; background-color: #00d350"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -159,8 +170,22 @@
       <div class="work__section section__container">
         <h2>My Work</h2>
         <h4>Projects</h4>
-        <div class="work__project">
-          <div class="project">
+        <div class="work__categories">
+          <button class="category__btn" data-filter="*">
+            All
+            <span class="category__count">2</span>
+          </button>
+          <button class="category__btn" data-filter="front-end">
+            Front-end
+            <span class="category__count">1</span>
+          </button>
+          <button class="category__btn" data-filter="back-end">
+            Back-end
+            <span class="category__count">1</span>
+          </button>
+        </div>
+        <div class="work__projects">
+          <div class="project" data-type="back-end">
             <img
               src="images/projects/osaka-tube.png"
               alt="osakatube"
@@ -192,7 +217,7 @@
               ></a>
             </ul>
           </div>
-          <div class="project">
+          <div class="project" data-type="front-end">
             <img
               src="images/projects/todolist.PNG"
               alt="todolist"
@@ -234,6 +259,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer Btn -->
     <ul id="footer__btn">
       <!-- 다크모드 버튼 만들예정<li><li> -->
       <li>
