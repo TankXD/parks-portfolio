@@ -21,7 +21,7 @@
 
 .navbar__logo {
   color: var(--color-white);
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: start;
 }
@@ -54,16 +54,27 @@
 
 .navbar__menu__item {
   color: var(--color-white);
+  width: 25%;
+
   padding: 0.5em;
   opacity: 0.6;
 }
 
-.navbar__menu__item:hover {
-  /* background-color: rgb(32, 32, 40); */
+.navbar__menu__item.active__item {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   opacity: 0.9;
+  font-weight: var(--weight-bold);
+}
+
+.navbar__menu__item:hover {
+  /* background-color: rgb(32, 32, 40); */
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  opacity: 0.9;
+  font-weight: var(--weight-bold);
 }
 
 /* navbar아이템 액티브인 애한테 자바스크립트로 active 클래스 줄 예정. */
