@@ -1,5 +1,7 @@
 const menu = document.querySelector(".navbar__menu");
 
+const hamburgerBtn = document.querySelector(".navbar__hamburger");
+
 // 이전에 클릭한 item이 어떤것인지 저장하기위한 변수 미리 생성
 let preItem;
 
@@ -25,3 +27,7 @@ const handleActive = (e) => {
 };
 
 menu.addEventListener("click", handleActive);
+
+hamburgerBtn.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});

@@ -27,16 +27,22 @@
 }
 .navbar__logo__image {
   width: 28px;
-  border-radius: 5px;
-  /* vertical-align: text-bottom; */
+  border-radius: 2px;
+  vertical-align: text-bottom;
 }
 
 .navbar__logo__title {
   /* font-size: var(--font-medium); */
+  font-family: "Poppins", sans-serif;
   font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
   color: var(--color-white);
   letter-spacing: -1px;
-  margin-left: 8px;
+  margin-left: 4px;
+  opacity: 0.9;
+}
+.mini__title {
+  display: none;
 }
 
 .navbar__menu {
@@ -80,4 +86,59 @@
 /* navbar아이템 액티브인 애한테 자바스크립트로 active 클래스 줄 예정. */
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
+}
+
+.navbar__hamburger {
+  display: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+  }
+  .navbar__logo {
+    width: 100%;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__menu.show {
+    display: flex;
+  }
+  .navbar__menu__item {
+    margin-top: 12px;
+  }
+  .navbar__hamburger {
+    font-size: var(--font-medium);
+    display: block;
+    position: fixed;
+    top: 34px;
+    right: 72px;
+  }
+  .navbar__hamburger.up__position {
+    top: 28px;
+    right: 42px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar__logo__title {
+    display: none;
+  }
+  .navbar__logo__title.mini__title {
+    display: inline-block;
+    font-weight: var(--weight-semi-bold);
+    opacity: 0.9;
+  }
+  .navbar__hamburger {
+    right: 50px;
+  }
+  .navbar__hamburger.up__position {
+    right: 28px;
+  }
 }

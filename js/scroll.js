@@ -3,6 +3,7 @@
 const navbar = document.getElementById("navbar");
 // navbar 엘레먼트의 크기를 받는 함수(getBoun~~)와 그 함수의 속성(.height)를 통해 navbar의 높이 받아옴
 const navbarHeight = navbar.getBoundingClientRect().height;
+const navbarHamburger = document.querySelector(".navbar__hamburger");
 
 // scrollBtn누르면 home->about으로 스크롤 되게 하는 버튼 만들기
 const scrollBtn = document.getElementById("scroll__btn");
@@ -37,9 +38,11 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--scroll");
     scrollTop.classList.add("active");
+    navbarHamburger.classList.add("up__position");
   } else if (window.scrollY < navbarHeight) {
     navbar.classList.remove("navbar--scroll");
     scrollTop.classList.remove("active");
+    navbarHamburger.classList.remove("up__position");
   }
 });
 
