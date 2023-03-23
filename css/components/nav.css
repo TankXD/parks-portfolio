@@ -125,6 +125,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  #navbar {
+    padding: 32px 5%;
+  }
   .navbar__logo__title {
     display: none;
   }
@@ -134,7 +137,7 @@
     opacity: 0.9;
   }
   .navbar__hamburger {
-    right: 50px;
+    right: 32px;
   }
   .navbar__hamburger.up__position {
     right: 28px;

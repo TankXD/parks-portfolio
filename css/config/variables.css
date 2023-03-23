@@ -29,10 +29,14 @@
   --font-large: 32px;
   --font-super-large: 40px;
   /* font-weight */
+  --weight-light: 300;
   --weight-regular: 400;
   --weight-semi-bold: 600;
   --weight-bold: 700;
 
   /* width */
   --section-max-width: 1200px;
+
+  /* box-shadow */
+  --shadow-outer: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

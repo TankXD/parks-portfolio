@@ -12,17 +12,19 @@
   max-width: 1200px;
   margin: auto;
   padding: 20px;
-  line-height: 1.5em;
+  line-height: 1.2em;
+  font-size: var(--font-small);
 }
 
 .skillset {
+  margin-top: 8px;
   display: flex;
 }
 
 .skillset__main {
   background-color: var(--bg-light-bg);
   flex-basis: 60%;
-  padding: 20px 40px;
+  padding: 20px 3%;
   border-radius: 10px 0 0 10px;
 }
 
@@ -67,4 +69,17 @@
 .skillset__others:hover {
   transition: transform 0.2s ease-in-out;
   transform: scale(1.02);
+  box-shadow: var(--shadow-outer);
+}
+
+@media screen and (max-width: 480px) {
+  .skillset {
+    flex-direction: column;
+  }
+  .skillset__main {
+    border-radius: 10px 10px 0 0;
+  }
+  .skillset__others {
+    border-radius: 0 0 10px 10px;
+  }
 }

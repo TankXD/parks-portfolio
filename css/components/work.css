@@ -20,7 +20,7 @@
 
 .category__btn {
   padding: 4px 32px;
-
+  position: relative;
   font-size: var(--font-small);
   border-radius: 10px;
   opacity: 0.7;
@@ -36,24 +36,26 @@
 }
 .category__btn.selected .category__count {
   opacity: 1;
-  top: 0px;
+  top: 3px;
 }
 
 .category__count {
   background-color: var(--bg-pink);
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: var(--font-mini);
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   opacity: 0;
   top: -16px;
+  right: 10px;
   transition: all 0.3s ease-in-out;
 }
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0px;
+  top: 3px;
 }
 
 .work__projects {
@@ -89,9 +91,8 @@
 
 .project:hover {
   transition: all 0.3s ease;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: var(--shadow-outer);
+
   transform: scale(1.01);
 }
 
@@ -110,6 +111,7 @@
   display: flex;
   flex-wrap: wrap;
   /* justify-content: center; */
+  min-width: 90%;
   max-width: 90%;
   gap: 6px;
   margin: 24px 0 16px 0;
@@ -127,6 +129,7 @@
 .project__description {
   line-height: 1.3em;
   text-align: start;
+  font-size: var(--font-small);
 }
 
 .project__links {
