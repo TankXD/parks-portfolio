@@ -23,7 +23,7 @@ body {
   width: 100%;
   /* width: 100vw; */
   height: 200vh;
-  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Poppins","Noto Sans JP", sans-serif; */
   font-family: "Nunito", "Noto Sans JP", sans-serif;
 
   /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
@@ -81,12 +81,6 @@ i {
   color: var(--color-white);
 }
 
-@media screen and (max-width: 480px) {
-  section {
-    padding: 0 5%;
-  }
-}
-
 @media screen and (max-width: 600px) {
   :root {
     /* font-size */
@@ -102,5 +96,11 @@ i {
     --weight-regular: 400;
     --weight-semi-bold: 600;
     --weight-bold: 700;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding: 0 5%;
   }
 }
