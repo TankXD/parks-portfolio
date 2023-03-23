@@ -15,19 +15,86 @@ const scrollTop = document.getElementById("scroll__top");
 
 // navbar menu item 눌렀을 때 링크로 이동하게하기.
 const navbarMenu = document.querySelector(".navbar__menu");
+const navbarMenuItems = document.querySelectorAll(".navbar__menu__item");
+let navbarHome;
+let navbarAbout;
+let navbarWork;
+let navbarContact;
+navbarMenuItems.forEach((item) => {
+  const link = item.dataset.link;
+  if (link === "#home") {
+    navbarHome = item;
+  } else if (link === "#about") {
+    navbarAbout = item;
+  } else if (link === "#work") {
+    navbarWork = item;
+  } else if (link === "#contact") {
+    navbarContact = item;
+  }
+});
 
 // #home아래까지 스크롤하면 점점 home__section안의 엘레먼트들이 투명해지게
-const home = document.querySelector(".home__section");
-const homeHeight = home.getBoundingClientRect().height;
+const homeSection = document.querySelector(".home__section");
+const homeHeight = homeSection.getBoundingClientRect().height;
+
+const handleScrollNav = () => {
+  const scollY = window.scrollY;
+  const homeY = Math.floor(
+    scollY + document.getElementById("home").getBoundingClientRect().top
+  );
+  const aboutY = Math.floor(
+    scollY + document.getElementById("about").getBoundingClientRect().top
+  );
+  const workY = Math.floor(
+    scollY + document.getElementById("work").getBoundingClientRect().top
+  );
+  const contactY = Math.floor(
+    scollY + document.getElementById("contact").getBoundingClientRect().top
+  );
+  // console.log(`scrollY : ${scrollY}`);
+  // console.log(`home : ${homeY}`);
+  // console.log(`about : ${aboutY}`);
+  // console.log(`work : ${workY}`);
+  // console.log(`contact : ${contactY}`);
+
+  const preActiveItem = document.querySelector(
+    ".navbar__menu__item.active__item"
+  );
+
+  if (scrollY < aboutY) {
+    if (preActiveItem) {
+      preActiveItem.classList.remove("active__item");
+    }
+    navbarHome.classList.add("active__item");
+  } else if (scrollY < workY && scrollY >= aboutY) {
+    if (preActiveItem) {
+      preActiveItem.classList.remove("active__item");
+    }
+    navbarAbout.classList.add("active__item");
+  } else if (scrollY < contactY && scrollY >= workY) {
+    if (preActiveItem) {
+      preActiveItem.classList.remove("active__item");
+    }
+    navbarWork.classList.add("active__item");
+  } else {
+    if (preActiveItem) {
+      preActiveItem.classList.remove("active__item");
+    }
+    navbarContact.classList.add("active__item");
+  }
+};
 
 document.addEventListener("scroll", () => {
-  console.log(homeHeight);
+  handleScrollNav();
+
+  navbarMenu.classList.remove("show");
+
   // 스크롤 하자마자 opacity 적용시키는게 아닌, homeheight과 비례해서
   // 어느정도 스크롤 했을 때 부터 opacity를 적용하기 위한 if문
   if (scrollY > homeHeight / 6) {
-    home.style.opacity = 0.9 - window.scrollY / homeHeight;
+    homeSection.style.opacity = 0.9 - window.scrollY / homeHeight;
   } else {
-    home.style.opacity = 1;
+    homeSection.style.opacity = 1;
   }
 });
 
