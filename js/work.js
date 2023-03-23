@@ -7,23 +7,42 @@ const projects = document.querySelectorAll(".project");
 let preTarget;
 
 const handleSelected = (e) => {
+  const targetBtn =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+
+  // 클릭한 타겟이 이미 클릭된 버튼과 같다면 아무것도 하지않고
+  // filterProject에게 null값을 return해줌.
+  if (targetBtn === preTarget) {
+    return;
+  }
+
   // 순서가 중요
   // 2. 다시 버튼 클릭하는 경우 이전 타겟의 active 클래스 삭제.
   if (preTarget) {
     preTarget.classList.remove("selected");
   }
 
-  const targetBtn =
-    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
   targetBtn.classList.add("selected");
-  preTarget = targetBtn;
   // 1. 이전 타겟을 나중에 저장해주고
+  preTarget = targetBtn;
+
+  //클릭한 타겟이 새로운 버튼이라면
+  // filterProject에게 targetBtn값을 제대로 리턴해줌.
+  return targetBtn;
 };
 
 const filterProject = (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
 
-  handleSelected(e);
+  const returnTargetBtn = handleSelected(e);
+
+  //클릭한 타겟이 이미 클릭된 버튼과 같다면
+  //handleSelected함수는 null을 return해주기 떄문에
+  // return값이 null = 이미 같은 버튼 클릭했다는 뜻이고
+  // 그런 경우 아래 코드까지 가지않고 지금 함수를 끝냄.
+  if (!returnTargetBtn) {
+    return;
+  }
 
   projectContainer.classList.add("anima");
   // anima클래스가 계속 적용되어있으면 안되서 3초뒤에 삭제해줌.
